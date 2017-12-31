@@ -46,7 +46,16 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+| Input | What it does |
+| ----| ---- |
+| 'ls | lists files found in a given directory |
+| 'ls -a' | lists all files (including hidden ones!) |
+| 'ls -l' | lists all files with their characteristics |
+| 'ls -lh' | lists long format with readable file size |
+| 'ls -lah' | |
+| 'ls -t' | lists files sorted by output time |
+| 'ls -Glp' | |
+
 
 ---
 
