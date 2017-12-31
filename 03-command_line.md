@@ -20,18 +20,18 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)
 
-Action | Command
--———|—-——
-Show current directory | pwd
-Create a directory | mkdir <directory_name>
-Deleting a directory | rm -R -i <directory_name>
-Creating a file using touch command | touch <file_name.extension>
-Deleting a file |rm <file_name>
-Listing hidden files | ls -a
-Copy a file from one directory to another | cp -r <original_path>/ <new_path>
-Rename a file | rm <bad_name.extension> <good_name.extension>
-Opening a nested directory | cd <directory_name>
-Move up a folder | cd ..
+|Action | Command|
+|———|—-——|
+|Show current directory | pwd|
+|Create a directory | mkdir <directory_name>|
+|Deleting a directory | rm -R -i <directory_name>|
+|Creating a file using touch command | touch <file_name.extension>|
+|Deleting a file |rm <file_name>|
+|Listing hidden files | ls -a|
+|Copy a file from one directory to another | cp -r <original_path>/ <new_path>|
+|Rename a file | rm <bad_name.extension> <good_name.extension>|
+|Opening a nested directory | cd <directory_name>|
+|Move up a folder | cd ..|
 
 ---
 
