@@ -48,13 +48,13 @@ What do the following commands do:
 
 | Input | What it does |
 | ----| ---- |
-| 'ls | lists files found in a given directory |
-| 'ls -a' | lists all files (including hidden ones!) |
-| 'ls -l' | lists all files with their characteristics |
-| 'ls -lh' | lists long format with readable file size |
-| 'ls -lah' | |
-| 'ls -t' | lists files sorted by output time |
-| 'ls -Glp' | |
+| `ls` | lists files found in a given directory |
+| `ls -a` | lists all files (including hidden ones!) |
+| `ls -l` | lists all files with their characteristics |
+| `ls -lh` | lists long format with readable file size |
+| `ls -lah` | lists all visible and ignored files, permissions, number, owner, groupe, size, date last modified. Ordered by filename. |
+| `ls -t` | lists files sorted by output time |
+| `ls -Glp` | lists visible files, permissions, number, owner, group, size, time of last modification, and name |
 
 
 ---
