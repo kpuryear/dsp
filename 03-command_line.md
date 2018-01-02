@@ -52,7 +52,7 @@ What do the following commands do:
 | `ls -a` | lists all files (including hidden ones!) |
 | `ls -l` | lists all files with their characteristics |
 | `ls -lh` | lists long format with readable file size |
-| `ls -lah` | lists all visible and ignored files, permissions, number, owner, groupe, size, date last modified. Ordered by filename. |
+| `ls -lah` | lists all visible and hidden files, permissions, number, owner, group, size, date last modified. Ordered by filename. |
 | `ls -t` | lists files sorted by output time |
 | `ls -Glp` | lists visible files, permissions, number, owner, group, size, time of last modification, and name |
 
@@ -63,7 +63,13 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+| Input | What it does |
+| ---- | ---- |
+| `ls -r` | Displays files in reverse order |
+| `ls -R` | Displays subdirectories as well |
+| `ls -q` | Displays all nonprinting characters as ? |
+| `ls -u` | Displays files by the file access time |
+| `ls -1` | Displays each entry on a line | 
 
 ---
 
@@ -71,7 +77,12 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+`xargs` is a function that allows us to search through a directory and find files with a certain name or extension. 
+</br>
+Here is an example:</br>
+`xargs find -name`</br>
+`"*.txt"`</br>
+`"*.log"`</br>
 
  
 
