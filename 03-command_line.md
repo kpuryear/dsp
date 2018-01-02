@@ -83,6 +83,7 @@ Here is an example:</br>
 `xargs find -name`</br>
 `"*.txt"`</br>
 `"*.log"`</br>
+This command will return any files with the extensions .txt or .log in our current directory.
 
  
 
