@@ -69,7 +69,7 @@ Cohen's D is an example of effect size.  Other examples of effect size are:  cor
 
 You will see effect size again and again in results of algorithms that are run in data science.  For instance, in the bootcamp, when you run a regression analysis, you will recognize the t-statistic as an example of effect size.
 
-Answer 2.4:
+####Answer 2.4:
 The basic premise of this problem was to isolate the first born children from 2nd, 3rd, 4th, etc. By assigning those to variables, we can reference first borns and others separately to compare their attributes. Then, using a function that calculates Cohen's Effect Size, we inputed the the variables.
 
 Here is the code:
