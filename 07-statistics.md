@@ -69,6 +69,38 @@ Cohen's D is an example of effect size.  Other examples of effect size are:  cor
 
 You will see effect size again and again in results of algorithms that are run in data science.  For instance, in the bootcamp, when you run a regression analysis, you will recognize the t-statistic as an example of effect size.
 
+Answer 2.4:
+The basic premise of this problem was to isolate the first born children from 2nd, 3rd, 4th, etc. By assigning those to variables, we can reference first borns and others separately to compare their attributes. Then, using a function that calculates Cohen's Effect Size, we inputed the the variables.
+
+Here is the code:
+```
+import math
+preg = ReadFemPreg()
+preg = CleanFemPreg(preg)
+
+Def CohenEffectSize(group1, group2)
+    diff = group1.mean() - group2.mean()
+    var1 = group1.var()
+    var2 = group2.var()
+    n1, n2 = len(group1), len(group2)
+
+    pooled_var = (n1*var1 + n2*var2)/(n1 + n2)
+    d = diff/math.sqrt(pooled_var)
+    return d
+
+live = preg[preg.outcome == 1]
+firsts = live[live.birthord == 1]
+others = live[live.birthord != 1]
+
+d_weight = CohenEffectSize(firsts["totalwgt_lb"], others["totalwgt_lb])
+d_preglength = CohenEffectSize(firsts["prglngth"], others["prglngth"])
+```
+The first calculation was to determine the Effect Size between birth weight of first babies vs.birth weight of later babies. This was calculated to be -0.0897.
+
+The second calculation was to determine the Effect Size between pregnancy length of first babies vs. pregnancy length of later babies. This was calculated to be 0.0289.
+
+These results tell us that first children generally weigh slightly less than their younger siblings at birth, and later pregnancies tend to last slightly longer than pregnancies of first born children. However, these effect sizes are very very small, so the data indicates that the difference is quite minimal.
+
 ### Q2. [Think Stats Chapter 3 Exercise 1](statistics/3-1-actual_biased.md) (actual vs. biased)
 This problem presents a robust example of actual vs biased data.  As a data scientist, it will be important to examine not only the data that is available, but also the data that may be missing but highly relevant.  You will see how the absence of this relevant data will bias a dataset, its distribution, and ultimately, its statistical interpretation.
 
