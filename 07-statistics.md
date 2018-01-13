@@ -208,7 +208,15 @@ This data shows that the random.random() generator is fairly uniform. The cdf tr
 ### Q4. [Think Stats Chapter 5 Exercise 1](statistics/5-1-blue_men.md) (normal distribution of blue men)
 This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic. 
 
+#### Answer 5.1:
+```
+from scipy.stats import norm
 
+norm.cdf(185.4, loc=178, scale=7.7) - norm.cdf(177.8, loc=178, scale=7.7)
+```
+This problem took a very small amount of code to complete! The package scipy.stats has many options for normal distributions. Since we knew that the height data follows a normal distribution, all we needed to input were the mean and standard deviation. `norm.cdf` provides the probability that any data point will fall below the value in question (it provides a percentile ranking). So we were able to calculate how likely it is for a man to be between 177.8cm (5' 10") and 185cm (6' 1"). 
+
+This line of code predicts that 34.2% of men are the correct height to join the Blue Man Group.
 
 ### Q5. Bayesian (Elvis Presley twin) 
 
