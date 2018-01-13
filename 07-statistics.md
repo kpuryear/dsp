@@ -104,6 +104,63 @@ These results tell us that first children generally weigh slightly less than the
 ### Q2. [Think Stats Chapter 3 Exercise 1](statistics/3-1-actual_biased.md) (actual vs. biased)
 This problem presents a robust example of actual vs biased data.  As a data scientist, it will be important to examine not only the data that is available, but also the data that may be missing but highly relevant.  You will see how the absence of this relevant data will bias a dataset, its distribution, and ultimately, its statistical interpretation.
 
+#### Answer 3.1:
+In this problem, I used the variable numkdhss on the nsfg response data to generate a list of the number of children per family. I created a dictionary to store this information, for easy input to the pmf and biased pmf function. I then calculated the pmf and biased pmf using functions found in chapter three, and plotted the data.
+
+Here is the code:
+```
+from __future__ import print_function
+
+import math
+import numpy as np
+
+import nsfg
+import first
+import thinkstats2
+import thinkplot
+
+resp = nsfg.ReadFemResp()
+kk = resp.numkdhh
+
+def householdkids(d):
+    pmf = thinkstats2.Pmf(d, label="actual")
+    print("actual mean: ", pmf.Mean())
+    biased_pmf = BiasPmf(pmf, label="observed")
+    print("observed mean: ", biased_pmf.Mean())
+    
+def PlotPmfs(d):
+    pmf = thinkstats2.Pmf(d, label="actual")
+    biased_pmf = BiasPmf(pmf, label="observed")
+    
+    thinkplot.PrePlot(2)
+    thinkplot.Pmfs([pmf, biased_pmf])
+    thinkplot.Show(root = "Kids in Family", xlabel = "Number of kids", ylabel = "PMF", axis = [0,5,0,0.5])
+
+def BiasPmf(pmf, label=''):
+    new_pmf = pmf.Copy(label=label)
+
+    for x, p in pmf.Items():
+        new_pmf.Mult(x, x)
+        
+    new_pmf.Normalize()
+    return new_pmf
+  
+    
+housekids = {}
+for i in range(len(kk)):
+    if kk[i] in housekids:
+        housekids[kk[i]] = (housekids[kk[i]])+1
+    else:
+        housekids[kk[i]] = 1
+    
+
+
+householdkids(housekids)
+PlotPmfs(housekids)
+```
+
+In this data, the actual mean is 1.024, and the observed mean is 2.403.
+
 ### Q3. [Think Stats Chapter 4 Exercise 2](statistics/4-2-random_dist.md) (random distribution)  
 This questions asks you to examine the function that produces random numbers.  Is it really random?  A good way to test that is to examine the pmf and cdf of the list of random numbers and visualize the distribution.  If you're not sure what pmf is, read more about it in Chapter 3.  
 
