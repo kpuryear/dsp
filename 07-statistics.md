@@ -228,17 +228,20 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 Bayes' Theorem ends up looking like:
 P(A|B) = (P(B|A)*P(A))/P(B)
 
-in this case:
+In this case:
+
 P(A|B) = probability that a person is an identical twin given that they are a twin.
 P(B|A) = probability that a person is a twin given that they are an identical twin.
 P(A) = Probability that one person is an identical twin.
 P(B) = probability that one person is a twin.
 
 Numerically:
+
 P(A|B) = not sure. We will solve for this value.
-P(B|A) = 1
-P(A) = (1/300)
-P(B) = (1/125)+(1/300) = 17/1500
+P(B|A) = 1.
+P(A) = (1/300).
+P(B) = (1/125)+(1/300) = 17/1500.
+
 
 When all the values are plugged into the formula, P(A|B) = 0.294, meaning that if you are a twin, there is a 29% chance that you are an identical twin.
 
