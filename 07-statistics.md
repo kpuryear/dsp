@@ -250,7 +250,7 @@ When all the values are plugged into the formula, P(A|B) = 0.294, meaning that i
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Bayesian methods involve creating a probability distribution. This allows the probability of a hypothesis to be updated as more data becomes available. It is also known as a compound distribution. On the other hand, Frequentist methods involve drawing conclusions from sample data by emphasizing the proportions of the data. Any given experiment can be considered as one of an infinite sequence of possible repetitions, each having their own statistical independence. Instead of creating a probability distribution, frequentist interference imposes a true or false conclusion from a significance test for each hypothesis.
 
 ---
 
